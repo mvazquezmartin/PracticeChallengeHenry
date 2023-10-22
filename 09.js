@@ -25,8 +25,47 @@ function filtrar(funcion) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
 
-};
+  //1
+  // Array.prototype.filtrar = function(funcion) {
+  //   const newArray = [];
+  //   for (let i = 0; i < this.length; i++) {
+  //     if (funcion(this[i])) {
+  //       newArray.push(this[i]);
+  //     }
+  //   }
+  //   return newArray;
+  // }
+  // 2
+  // Array.prototype.filtrar = function(funcion) {
+  //   const newArray = [];
+  //   this.forEach(elemento => {
+  //     if (funcion(elemento)) {
+  //       newArray.push(elemento);
+  //     }
+  //   });
+  //   return newArray;
+  // };
+  // 3
+  // Array.prototype.filtrar = function(funcion) {
+  //   return this.reduce((resultados, elemento) => {
+  //     if (funcion(elemento)) {
+  //       resultados.push(elemento);
+  //     }
+  //     return resultados;
+  //   }, []);
+  // };
+
+  Array.prototype.filtrar = function (funcion) {
+    const newArray = [];
+    for (const elemento of this) {
+      if (funcion(elemento)) {
+        newArray.push(elemento);
+      }
+    }
+    return newArray;
+  };
+}
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = filtrar
+module.exports = filtrar;

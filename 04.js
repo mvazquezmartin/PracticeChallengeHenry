@@ -12,6 +12,15 @@ function numeroSimetrico(num) {
   // Ej:
   // numeroSimetrico(11711) devuelve true
   // Tu código:
+  // 1
+  // const numString = num.toString();
+  // const length = numString.length;
+  // for (let i = 0; i < length / 2; i++) {
+  //   if (numString[i] !== numString[length - 1 - i]) {
+  //     return false;
+  //   }
+  // }
+  // return true;
   const numString = num.toString();
   const reverseNum = numString.split("").reverse().join("");
   return numString === reverseNum;

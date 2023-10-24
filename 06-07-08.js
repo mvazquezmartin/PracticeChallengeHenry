@@ -22,7 +22,9 @@ function crearClasePersona() {
       // { nombre: nombre, edad: edad} al arreglo de amigos de la persona.
       // No debe retornar nada.
       // Tu código aca:
-      this.amigos.push({ nombre, edad });
+      // this.amigos.push({ nombre, edad });
+      const newFriend = {nombre, edad}
+      this.amigos.push(newFriend)
     }
 
     addHobby(hobby) {

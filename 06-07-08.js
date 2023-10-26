@@ -23,8 +23,8 @@ function crearClasePersona() {
       // No debe retornar nada.
       // Tu código aca:
       // this.amigos.push({ nombre, edad });
-      const newFriend = {nombre, edad}
-      this.amigos.push(newFriend)
+      // const newFriend = {nombre, edad}
+      this.amigos.push({ nombre, edad });
     }
 
     addHobby(hobby) {
@@ -33,6 +33,7 @@ function crearClasePersona() {
       // Tu código aca:
       this.hobbies.push(hobby);
     }
+
     getFriends() {
       // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
       // de la persona.
@@ -40,7 +41,7 @@ function crearClasePersona() {
       // Suponiendo que la persona tiene estos amigos: [{nombre: 'martin', edad: 31},{nombre: 'toni', edad: 33}]
       // persona.getFriends() debería devolver ['martin', 'toni']
       // Tu código aca:
-      return this.amigos.map((obj)=> obj.nombre)
+      return this.amigos.map((obj) => obj.nombre);
     }
 
     getHobbies() {

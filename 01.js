@@ -13,13 +13,27 @@ function soloNumeros(array) {
   // Tu código aca:
   // 1
   // return array.filter(e => typeof e === 'number' && !isNaN(e));
-  const onlyNumber = [];
-  array.forEach((e) => {
-    if (Number.isInteger(e)) onlyNumber.push(e);
-  });
-  return onlyNumber;
+  // 2
+  // const onlyNumber = [];
+  // array.forEach((e) => {
+  //   if (Number.isInteger(e)) onlyNumber.push(e);
+  // });
+  // return onlyNumber;
+  // 3
+  // const onlyNumber = [];
+  // for (const i of array) {
+  //   if (Number.isInteger(i)) onlyNumber.push(i);
+  // }
+  // return onlyNumber;
+  // 4
+  // const onlyNumber = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   if (Number.isInteger(array[i])) onlyNumber.push(array[i]);
+  // }
+  // return onlyNumber;
+  return array.filter((e) => parseInt(e) === e);
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = soloNumeros; 
+module.exports = soloNumeros;

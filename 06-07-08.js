@@ -41,6 +41,13 @@ function crearClasePersona() {
       // Suponiendo que la persona tiene estos amigos: [{nombre: 'martin', edad: 31},{nombre: 'toni', edad: 33}]
       // persona.getFriends() debería devolver ['martin', 'toni']
       // Tu código aca:
+      // 1
+      // const arrayAmigos = []
+      // for (const amigo of this.amigos){
+      //   arrayAmigos.push(amigo.nombre)
+      // }
+      // return arrayAmigos
+
       return this.amigos.map((obj) => obj.nombre);
     }
 

@@ -46,7 +46,7 @@ function crearClasePersona() {
       // for (const amigo of this.amigos){
       //   arrayAmigos.push(amigo.nombre)
       // }
-      // return arrayAmigos
+      // return arrayAmigos 
 
       return this.amigos.map((obj) => obj.nombre);
     }

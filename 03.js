@@ -23,9 +23,12 @@ function buscarAmigo(amigos, nombre) {
   // 2
   // const amigoEncontrado = amigos.filter(amigo => amigo.nombre === nombre);
   // return amigoEncontrado.length > 0 ? amigoEncontrado[0] : null;
-  return amigos.find(amigo=> amigo.nombre === nombre )
+  // return amigos.find(amigo=> amigo.nombre === nombre )
+  return amigos.map((amigo) => {
+    return amigo.nombre === nombre;
+  });
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = buscarAmigo
+module.exports = buscarAmigo;

@@ -46,7 +46,7 @@ function crearClasePersona() {
       // for (const amigo of this.amigos){
       //   arrayAmigos.push(amigo.nombre)
       // }
-      // return arrayAmigos 
+      // return arrayAmigos
 
       return this.amigos.map((obj) => obj.nombre);
     }
@@ -74,10 +74,22 @@ function crearClasePersona() {
       // }
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
       // Tu código aca:
-      const promedio = this.amigos.reduce((acum, obj) => {
-        return acum + obj.edad;
+      // 1
+      // let sumaEdades = 0;
+      // for (const amigo of this.amigos) {
+      //   sumaEdades += amigo.edad;
+      // }
+      // return sumaEdades / this.amigos.length;
+      // 2
+      // let sumaEdades = 0;
+      // this.amigos.forEach((amigo) => {
+      //   sumaEdades += amigo.edad;
+      // });
+      // return sumaEdades / this.amigos.length;
+      const sumaEdad = this.amigos.reduce((acum, obj) => {
+        return acum + obj.edad
       }, 0);
-      return promedio / this.amigos.length;
+      return sumaEdad / this.amigos.length;
     }
   }
 
